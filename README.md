@@ -1,3 +1,5 @@
+이 레포지토리는 https://github.com/aws-samples/moodle-on-aws-cn 를 fork 만들었습니다.
+
 # Moodle on AWS
 
 Moodle은 교육자, 관리자 및 학습자에게 개인화 된 학습 환경을 만들기 위해 강력하고 안전하며 완전한 시스템을 제공하도록 설계된 학습 플랫폼입니다.
