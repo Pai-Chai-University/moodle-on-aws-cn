@@ -69,15 +69,15 @@ Application Cache를 배포하기로 선택한 경우 Moodle 사이트가 배포
     | Availability Zones           |               | Subnet 사용 .                                            |
     | VpcCidr                      | 10.0.0.0/16   | VPC CIDR                                                     |
     | VpcTenancy                   | default       |                                                              |
-    | Public Subnet 0              | 10.0.200.0/24 | AZ0에 있는 Public Subnet 0 가운데 CIDR                               |
-    | Public Subnet 1              | 10.0.201.0/24 | Public Subnet 1 의 AZ1 中的 CIDR                             |
-    | Public Subnet 2              | 10.0.202.0/24 | Public Subnet 2 의 AZ2 中的 CIDR                             |
-    | Web Subnet 0                 | 10.0.0.0/24   | Web Subnet 0 의 AZ0 中的 CIDR                                |
-    | Web Subnet 1                 | 10.0.4.0/24   | Web Subnet 1 의 AZ1 中的 CIDR                                |
-    | Web Subnet 2                 | 10.0.8.0/24   | Web Subnet 2 의 AZ2 中的 CIDR                                |
-    | Data Subnet 0                | 10.0.100.0/24 | Data Subnet 0 의 AZ0 中的 CIDR                               |
-    | Data Subnet 1                | 10.0.101.0/24 | Data Subnet 1 의 AZ1 中的 CIDR                               |
-    | Data Subnet 2                | 10.0.102.0/24 | Data Subnet 2 의 AZ2 中的 CIDR                               |
+    | Public Subnet 0              | 10.0.200.0/24 | AZ0 에서 퍼블릭 서브넷 0의 CIDR                             |
+    | Public Subnet 1              | 10.0.201.0/24 | AZ1 에서 퍼블릭 서브넷 1의 CIDR                             |
+    | Public Subnet 2              | 10.0.202.0/24 | AZ2 에서 퍼블릭 서브넷 2의 CIDR                            |
+    | Web Subnet 0                 | 10.0.0.0/24   | AZ0 에서 Web Subnet 0 의 CIDR                                |
+    | Web Subnet 1                 | 10.0.4.0/24   | AZ1 에서 Web Subnet 1 의 CIDR                                |
+    | Web Subnet 2                 | 10.0.8.0/24   | AZ2 에서 Web Subnet 2 의 CIDR                                |
+    | Data Subnet 0                | 10.0.100.0/24 | AZ0 에서 Data Subnet 0 의 CIDR                               |
+    | Data Subnet 1                | 10.0.101.0/24 | AZ1 에서 Data Subnet 1 의 CIDR                               |
+    | Data Subnet 2                | 10.0.102.0/24 | AZ2 에서 Data Subnet 2 의 CIDR                               |
 
     **File System Tier**
 
