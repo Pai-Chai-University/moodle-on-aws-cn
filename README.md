@@ -1,4 +1,4 @@
-이 레포지토리는 https://github.com/aws-samples/moodle-on-aws-cn 를 fork 만들었습니다.
+이 레포지토리는 https://github.com/aws-samples/moodle-on-aws-cn 를 fork하여 만들었습니다.
 
 # Moodle on AWS
 
