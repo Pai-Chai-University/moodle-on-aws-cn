@@ -22,7 +22,7 @@ Moodle은 교육자, 관리자 및 학습자에게 개인화 된 학습 환경�
     aws iam list-server-certificates
     ```
 
-2. CloudFormation 스택을 시작할 때 ** 최소 및 최대 ASG (Auto Scaling Group) 값을 1로 설정 ** 합니다. 세션 캐싱을 설정했다면 Moodle을 처음 설치할 때 다음과 같은 오류가 발생할 수 있습니다
+2. CloudFormation 스택을 시작할 때 **최소 및 최대 ASG (Auto Scaling Group) 값을 1로 설정** 합니다. 세션 캐싱을 설정했다면 Moodle을 처음 설치할 때 다음과 같은 오류가 발생할 수 있습니다
     ```
     Installation must be finished from the original IP address, sorry.
     ```
@@ -31,7 +31,7 @@ Moodle은 교육자, 관리자 및 학습자에게 개인화 된 학습 환경�
 
 4. Moodle 사이트 관리에서 구성 Application Cache를 설정합니다。
 
-5. 이제 방금 배포 한 스택을 ** 업데이트 ** 하고 필요에 따라 ** 최소 및 최대 Auto Scaling 그룹 ** 값을 설정할 수 있습니다.。
+5. 이제 방금 배포 한 스택을 **업데이트** 하고 필요에 따라 **최소 및 최대 Auto Scaling 그룹** 값을 설정할 수 있습니다.。
 
 6. 비용을 절감하기 위해 애플리케이션 캐시와 세션 캐시가 Redis 클러스터를 공유하도록하려면 CloudFormation 스택에서 애플리케이션 캐시를 활성화하지 않도록 선택할 수 있습니다. Moodle 사이트 구성에서 응용 프로그램 캐시와 세션 캐시를 동일한 캐시 저장소로 구성합니다.
 
@@ -47,11 +47,11 @@ Application Cache를 배포하기로 선택한 경우 Moodle 사이트가 배포
     
 1. 기본적으로 템플릿은 AWS Ningxia 리전에서 시작됩니다. 다른 AWS 리전에서 솔루션을 시작하려면 콘솔 탐색 모음에서 리전 선택기를 사용하십시오.
 
-1. ** Create Stack ** 페이지에서 ** Amazon S3 URL ** 텍스트 상자에 올바른 템플릿 URL이 표시되는지 확인하고 ** Next ** 를 선택합니다.
+1. **Create Stack** 페이지에서 **Amazon S3 URL** 텍스트 상자에 올바른 템플릿 URL이 표시되는지 확인하고 **Next** 를 선택합니다.
 
-1. ** 스택 세부 정보 지정 ** 페이지에서 솔루션 스택에 이름을 할당합니다.
+1. **스택 세부 정보 지정** 페이지에서 솔루션 스택에 이름을 할당합니다.
 
-1. ** 매개 변수 ** 에서 템플릿의 매개 변수를보고 필요에 따라 수정합니다. 이 솔루션은 다음 기본값을 사용합니다.
+1. **매개 변수** 에서 템플릿의 매개 변수를보고 필요에 따라 수정합니다. 이 솔루션은 다음 기본값을 사용합니다.
 
     **General AWS**
 
@@ -124,15 +124,15 @@ Application Cache를 배포하기로 선택한 경우 Moodle 사이트가 배포
     | ------------- | ------ | ------------------- |
     | Language Code | en     | Moodle 사이트 기본 언어 |
 
-2. ** 다음 ** 을 선택합니다.
+2. **다음** 을 선택합니다.
 
-3. ** 스택 옵션 구성 ** 페이지에서 "다음"을 선택합니다.
+3. **스택 옵션 구성** 페이지에서 "다음"을 선택합니다.
 
-4. ** 검토 ** 페이지에서 설정을 검토하고 확인합니다. 확인란을 선택하여 템플릿이 AWS Identity and Access Management (IAM) 리소스를 생성하는지 확인하십시오.
+4. **검토** 페이지에서 설정을 검토하고 확인합니다. 확인란을 선택하여 템플릿이 AWS Identity and Access Management (IAM) 리소스를 생성하는지 확인하십시오.
 
-5. ** Create Stack ** 을 선택하여 스택을 배포합니다.
+5. **Create Stack** 을 선택하여 스택을 배포합니다.
 
-AWS CloudFormation 콘솔의 ** 상태 ** 열에서 스택의 상태를 볼 수 있습니다. 약 30 분 후에 상태가 CREATE_COMPLETE로 표시되어야합니다.
+AWS CloudFormation 콘솔의 **상태** 열에서 스택의 상태를 볼 수 있습니다. 약 30 분 후에 상태가 CREATE_COMPLETE로 표시되어야합니다.
 
 ## 2 단계 : CloudFront 및 ALB CNAME 구성
 
@@ -142,7 +142,7 @@ ALB 및 CloudFront의 DNS 이름을 찾으려면 아래 단계를 따르십시�
 
 1. 1 단계에서 생성 한 CloudFormation 메인 스택을 선택합니다 (NESTED 스택은 선택하지 마십시오).
 
-1. ** 내보내기 ** 를 클릭합니다.。
+1. **내보내기** 를 클릭합니다.。
 
 1. **PublicAlbDnsName** 에 대한 ALB DNS Name, **CloudFrontDnsName** 에 대한 CloudFront DNS Name.
 
