@@ -55,99 +55,99 @@ Application Cache를 배포하기로 선택한 경우 Moodle 사이트가 배포
 
     | 매개 변수        | 기본값     | 설명                                                 |
     | --------------- | --------- | ----------------------------------------------------- |
-    | EC2 Key Pair    |           | EC2 Key Pair 名称，用于登录 Web 实例 |
-    | SSH Access From | 0.0.0.0/0 | 允许登录 Bastion 的 IP 地址段 (CIDR格式)              |
-    | Site Domain     |           | Moodle 站点域名                                       |
+    | EC2 Key Pair    |           | EC2 Key Pair 웹 인스턴스에 로그인하는 데 사용되는 이름    |
+    | SSH Access From | 0.0.0.0/0 | Bastion IP 주소 범위 (CIDR 형식)에 대한 로그인 허용      |
+    | Site Domain     |           | Moodle 도메인 이름                                     |
 
     **Network**
 
     | 매개 변수                     | 기본값         | 설명                                                          |
     | ---------------------------- | ------------- | ------------------------------------------------------------ |
-    | Number of Availability Zones | 3             | 创建 VPC 时使用的 AZ 数量. 这个数量必须与 Availability Zones 中选择的数量一致 |
-    | Availability Zones           |               | Subnet 使用的 AZ.                                            |
+    | Number of Availability Zones | 3             | VPC를 생성 할 때 사용되는 AZ 수. 이 수량은 가용 영역에서 선택한 수량과 일치해야합니다 |
+    | Availability Zones           |               | Subnet 사용 .                                            |
     | VpcCidr                      | 10.0.0.0/16   | VPC CIDR                                                     |
     | VpcTenancy                   | default       |                                                              |
-    | Public Subnet 0              | 10.0.200.0/24 | Public Subnet 0 在 AZ0 中的 CIDR                             |
-    | Public Subnet 1              | 10.0.201.0/24 | Public Subnet 1 在 AZ1 中的 CIDR                             |
-    | Public Subnet 2              | 10.0.202.0/24 | Public Subnet 2 在 AZ2 中的 CIDR                             |
-    | Web Subnet 0                 | 10.0.0.0/24   | Web Subnet 0 在 AZ0 中的 CIDR                                |
-    | Web Subnet 1                 | 10.0.4.0/24   | Web Subnet 1 在 AZ1 中的 CIDR                                |
-    | Web Subnet 2                 | 10.0.8.0/24   | Web Subnet 2 在 AZ2 中的 CIDR                                |
-    | Data Subnet 0                | 10.0.100.0/24 | Data Subnet 0 在 AZ0 中的 CIDR                               |
-    | Data Subnet 1                | 10.0.101.0/24 | Data Subnet 1 在 AZ1 中的 CIDR                               |
-    | Data Subnet 2                | 10.0.102.0/24 | Data Subnet 2 在 AZ2 中的 CIDR                               |
+    | Public Subnet 0              | 10.0.200.0/24 | AZ0에 있는 Public Subnet 0 가운데 CIDR                               |
+    | Public Subnet 1              | 10.0.201.0/24 | Public Subnet 1 의 AZ1 中的 CIDR                             |
+    | Public Subnet 2              | 10.0.202.0/24 | Public Subnet 2 의 AZ2 中的 CIDR                             |
+    | Web Subnet 0                 | 10.0.0.0/24   | Web Subnet 0 의 AZ0 中的 CIDR                                |
+    | Web Subnet 1                 | 10.0.4.0/24   | Web Subnet 1 의 AZ1 中的 CIDR                                |
+    | Web Subnet 2                 | 10.0.8.0/24   | Web Subnet 2 의 AZ2 中的 CIDR                                |
+    | Data Subnet 0                | 10.0.100.0/24 | Data Subnet 0 의 AZ0 中的 CIDR                               |
+    | Data Subnet 1                | 10.0.101.0/24 | Data Subnet 1 의 AZ1 中的 CIDR                               |
+    | Data Subnet 2                | 10.0.102.0/24 | Data Subnet 2 의 AZ2 中的 CIDR                               |
 
     **File System Tier**
 
     | 매개 변수             | 기본값          | 설명                                      |
     | -------------------- | -------------- | ---------------------------------------- |
-    | EFS Performance Mode | generalPurpose | 文件系统的性能模式                          |
-    | Encrpyted EFS?       | false          | 是否加密 EFS                             |
-    | Add dummy data (GiB) | 0              | 在 EFS 中增加 dummy data                 |
-    | Instance Type        | r4.large       | 在 EFS 中增加 dummy data 的 EC2 实例大小 |
+    | EFS Performance Mode | generalPurpose | 파일 시스템 성능 모드                      |
+    | Encrpyted EFS?       | false          | EFS 암호화 여부                             |
+    | Add dummy data (GiB) | 0              | EFS에 dummy data 증가                 |
+    | Instance Type        | r4.large       | EFS에 dummy data 증가시 EC2 인스턴스 크기 |
 
     **Database Tier**
 
     |매개 변수            | 기본값       | 설명                |
     | ------------------ | ----------- | ------------------ |
-    | DB Instance Class  | db.r5.large | 数据库实例大小     |
-    | DB Master Username | moodle      | Master 用户名      |
-    | DB Master Password |             | Master 用户密码    |
-    | DB Name            | moodle      | RDS 默认数据库名称 |
+    | DB Instance Class  | db.r5.large | 데이터베이스 인스턴스 크기    |
+    | DB Master Username | moodle      | Master 사용자 이름      |
+    | DB Master Password |             | Master 사용자 암호    |
+    | DB Name            | moodle      | RDS 기본 데이터베이스 이름 |
 
     **Caching Tier**
 
     | 매개 변수                                      | 기본값          | 설명                                                 |
     | --------------------------------------------- | -------------- | ---------------------------------------------------- |
-    | Use Session Cache                             | true           | Moodle 是否启用 Session Cache                        |
-    | Session Cache Node Type                       | cache.r5.large | ElastiCache 实例大小                                 |
-    | Use Application Cache                         | false          | Moodle 是否启用 Application Cache                    |
-    | Application Cache Node Type                   | cache.r5.large | ElastiCache 实例大小                                 |
-    | Use CloudFront                                | false           | 是否创建 CloudFront                                  |
-    | CloudFront Certificate ID uploaded in AWS IAM |                | CloudFront 使用的 SSL 证书ID, 必须提前上传到 AWS IAM |
+    | Use Session Cache                             | true           | Moodle Session Cache 활성화 여부                        |
+    | Session Cache Node Type                       | cache.r5.large | ElastiCache 인스턴스 크기                            |
+    | Use Application Cache                         | false          | Moodle Application Cache 활성화 여부                  |
+    | Application Cache Node Type                   | cache.r5.large | ElastiCache 인스턴스 크기                             |
+    | Use CloudFront                                | false           | CloudFront 생성 여부                                 |
+    | CloudFront Certificate ID uploaded in AWS IAM |                | CloudFront 사용 된 SSL 인증서 ID, AWS IAM에 업로드 |
 
     **Web Tier**
 
     | 매개 변수               | 기본값    | 설명                                          |
     | ---------------------- | -------- | --------------------------------------------- |
-    | Public ALB Domain Name |          | ALB 自定义域名                                |
-    | ALB Certificate ARN    |          | ALB 使用的 SSL 证书ID, 必须提前上传到 AWS IAM |
-    | Web Tier Instance Type | c5.large | Web 实例大小                                  |
-    | Web ASG Max            | 1        | Web Auto Scaling Group 最大值                 |
-    | Web ASG Min            | 1        | Web Auto Scaling Group 最小值                 |
+    | Public ALB Domain Name |          | ALB 맞춤 도메인 이름                                |
+    | ALB Certificate ARN    |          | ALB 사용 된 SSL 인증서 ID, AWS IAM에 업로드    |
+    | Web Tier Instance Type | c5.large | Web 인스턴스 크기                             |
+    | Web ASG Max            | 1        | Web Auto Scaling Group 최대치                 |
+    | Web ASG Min            | 1        | Web Auto Scaling Group 최소치                 |
 
     **Moodle**
 
     | 매개 변수      | 기본값  | 설명                 |
     | ------------- | ------ | ------------------- |
-    | Language Code | en     | Moodle 站点默认语言 |
+    | Language Code | en     | Moodle 사이트 기본 언어 |
 
-2. 选择**下一步**。
+2. ** 다음 ** 을 선택합니다.
 
-3. 在**配置堆栈选项**页面上，选择“下一步”。
+3. ** 스택 옵션 구성 ** 페이지에서 "다음"을 선택합니다.
 
-4. 在**审核**页面上，查看并确认设置。 确保选中确认模板将创建 AWS Identity and Access Management（IAM）资源的框。
+4. ** 검토 ** 페이지에서 설정을 검토하고 확인합니다. 확인란을 선택하여 템플릿이 AWS Identity and Access Management (IAM) 리소스를 생성하는지 확인하십시오.
 
-5. 选择**创建堆栈**以部署堆栈。
+5. ** Create Stack ** 을 선택하여 스택을 배포합니다.
 
-您可以在AWS CloudFormation控制台的**状态**列中查看堆栈的状态。 您应该在大约30分钟内看到状态为CREATE_COMPLETE。
+AWS CloudFormation 콘솔의 ** 상태 ** 열에서 스택의 상태를 볼 수 있습니다. 약 30 분 후에 상태가 CREATE_COMPLETE로 표시되어야합니다.
 
-## 步骤2: 配置 CloudFront 和 ALB CNAME
+## 2 단계 : CloudFront 및 ALB CNAME 구성
 
-通过如下步骤找到 ALB 和 CloudFront 的 DNS Name. 如何配置 CNAME 记录取决于您使用的 DNS Resolver. 
+ALB 및 CloudFront의 DNS 이름을 찾으려면 아래 단계를 따르십시오. CNAME 레코드를 구성하는 방법은 사용하는 DNS Resolver에 따라 다릅니다.
 
-1. 登录到 AWS 管理控制台，并选择进入 CloudFormation 控制台。
+1. AWS Management Console에 로그인하고 CloudFormation 콘솔로 들어가도록 선택합니다.
 
-1. 选择步骤1中创建的 CloudFormation 主堆栈（请不要选择 NESTED 堆栈）。
+1. 1 단계에서 생성 한 CloudFormation 메인 스택을 선택합니다 (NESTED 스택은 선택하지 마십시오).
 
-1. 点击**输出**。
+1. ** 내보내기 ** 를 클릭합니다.。
 
-1. **PublicAlbDnsName** 为 ALB DNS Name, **CloudFrontDnsName** 为 CloudFront DNS Name.
+1. **PublicAlbDnsName** 에 대한 ALB DNS Name, **CloudFrontDnsName** 에 대한 CloudFront DNS Name.
 
-登录到您的 DNS Resolver 控制台，配置域名指向这两处 DNS Name。
+DNS Resolver 콘솔에 로그인하고이 두 DNS 이름을 가리 키도록 도메인 이름을 구성합니다.
 
 
-## 构建自己的解决方案
+## 나만의 솔루션 구축
 
-点击查看[文档](build.md)
+[문서] (build.md)를 보려면 클릭하세요.
 
